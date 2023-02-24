@@ -18,13 +18,13 @@ def choose():
         firstway(outname)
 
 def firstway(outname):
+
     try:
         lncount = int(input('\nВведите количество заголовков: |'))
     except ValueError:
         print('\nВы ввели не число а текст!')
-        firstway
-    if lncount == None:
-        print('Вы ничего не ввели!')
+        firstway(outname)
+    
     for line in range(lncount):
         print(line)
 
