@@ -11,23 +11,47 @@ def choose():
     if way not in ['1', '2']:
         print('\nТакого варианта не существует! Напишите 1 или 2.\n\n')
         choose()
-    
+
     outname = input('\nВведите название итогового pdf файла: |')
 
     if way == '1':
         firstway(outname)
-
+    if way == '2':
+        secondway()
+    pdf.output(f'{outname}.pdf')
 def firstway(outname):
     try:
         lncount = int(input('\nВведите количество заголовков: |'))
     except ValueError:
         print('\nВы ввели не число а текст!')
-        firstway
+        firstway()
     if lncount == None:
         print('Вы ничего не ввели!')
-    for line in range(lncount):
-        print(line)
-
+    for line in range(1, lncount+1):
+        title = input(f'Введите заголовок №{line}: \n')
+        #................................................................
+    
+def secondway():
+    with open('input.txt') as input:
+        for line in input:
+            splitted = line.split()
+            if splitted[0] == '!T':
+                red = float(splitted[1])
+                green = float(splitted[2])
+                blue = float(splitted[3])
+                pdf.set_text_color(red, green, blue)
+                joined = ' '.join(splitted[4:])
+                pdf.multi_cell(100, 10, joined, 'B', align="C")
+            elif splitted[0] == '!P':
+                red = float(splitted[1])
+                green = float(splitted[2])
+                blue = float(splitted[3])
+                pdf.set_text_color(red, green, blue)
+                joined = ' '.join(splitted[4:])
+                pdf.multi_cell(100, 10, joined, align="L")
+            else:
+                print("README.MD")
+            
 choose()
 
 
