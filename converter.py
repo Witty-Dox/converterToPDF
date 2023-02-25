@@ -41,7 +41,7 @@ def secondway():
                 blue = float(splitted[3])
                 pdf.set_text_color(red, green, blue)
                 joined = ' '.join(splitted[4:])
-                pdf.multi_cell(100, 10, joined, 'B', align="C")
+                pdf.multi_cell(100, 10, joined, align="C")
             elif splitted[0] == '!P':
                 red = float(splitted[1])
                 green = float(splitted[2])
