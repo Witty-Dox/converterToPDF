@@ -1,8 +1,2 @@
 !T 255 0 255 Lorem ipsum dolor sit amet
-!T 0 255 0 Lorem dolor ipsum amet sit
-!T 150 0 150 Lorem ipsum dolor sit amet
-!T 0 150 0 Lorem dolor ipsum amet sit
-!P 250 150 250 Lorem ipsum dolor sit amet
-!P 0 250 150 Lorem dolor ipsum amet sit
-!P 150 200 100 Lorem ipsum dolor sit amet
-!P 100 0 0 Lorem dolor ipsum amet sit
+!P 250 150 250 Lorem ipsum dolor sit amet ПМППП
